@@ -47,6 +47,10 @@ function concertThis() {
             console.log(err);
             }
         }
+        fs.appendFile("random.txt", showInfo, function(err) {
+            if (err) throw err;
+            console.log(showInfo);
+        });
 
     });
 

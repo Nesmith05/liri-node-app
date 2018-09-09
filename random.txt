@@ -1,8 +1,10 @@
 spotify-this-song,"I Want it That Way"
 
-        Venue: undefined
-        
-        Venue: 
-        
-        Venue: AT&T Stadium
-        
+            Venue: TivoliVredenburg
+            Venue location: Utrecht 
+            Date: 2018-10-26T19:00:19
+            
+            Venue: Oslo Spektrum Arena
+            Venue location: Oslo 
+            Date: 2019-03-03T18:30:00
+            

@@ -1,0 +1,9 @@
+[object Object]
+            Venue: TivoliVredenburg
+            Venue location: Utrecht 
+            Date: 2018-10-26T19:00:19
+            
+            Venue: TivoliVredenburg
+            Venue location: Utrecht 
+            Date: 2018-10-26T19:00:19
+            
