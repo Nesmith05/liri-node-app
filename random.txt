@@ -1,73 +1,8 @@
 spotify-this-song,"I Want it That Way"
-        Venue: undefined
-        Venue Location: undefinedundefined
-        Date: undefined
-        
-        Venue: undefined
-        Venue Location: undefinedundefined
-        Date: undefined
-        
-        Venue: undefined
-        Venue Location: undefinedundefined
-        Date: undefined
-        
-        Venue: undefined
-        Venue Location: undefined
-        Date: undefined
-        
+
         Venue: undefined
         
-        Venue: undefined
-        Venue Location: undefined
-        Date: undefined
+        Venue: 
         
-            Venue: undefined
-            Venue Location: undefined
-            Date: undefined
-            
-            Venue: undefined
-            Venue Location: undefined
-            Date: undefined
-            
-            Venue: undefined
-            Venue Location: undefined
-            Date: undefined
-            
-            Venue: undefined
-            Venue Location: undefined
-            Date: undefined
-            
-            Venue: undefined
-            Venue Location: undefined
-            Date: undefined
-            
-        Venue: undefined
-        Venue Location: undefinedundefined
-        Date: undefined
-        
-        Venue: undefined
-        
-        Venue: undefined
-        
-        Venue: undefined
-        
-        Venue: undefined
-        
-        Venue: undefined
-        Venue Location: undefined
-        
-        Venue: undefined
-        Venue Location: undefined
-        
-        Venue: undefined
-        Venue Location: undefined
-        
-        Venue: undefined
-        Venue Location: undefined
-        
-        Venue: undefined
-        Venue Location: undefined
-        
-        Venue: undefined
-        Venue Location: undefined
+        Venue: AT&T Stadium
         

@@ -32,22 +32,23 @@ function concertThis() {
     artist = term;
     var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
     request(queryURL, function(err, response, body){
-        var showData = JSON.parse(body);
-        // console.log(showData);
-        // console.log(queryURL);
-        var showInfo =`
-        Venue: ${showData.artist_id}
-        Venue Location: ${showData.venue}
-        `;
-        console.log(showInfo);
-        if (err) {
+        for(i=0; i < 7; i++) {
+            var showData = JSON.parse(body)[i];
+            // console.log(showData);
+            // console.log(queryURL);
+            var showInfo =`
+            Venue: ${showData.venue.name}
+            Venue location: ${showData.venue.city} ${showData.venue.region}
+            Date: ${showData.datetime}
+            `;
+            //CONVERT TO MOMENT.JS
+            console.log(showInfo);
+            if (err) {
             console.log(err);
+            }
         }
 
-        fs.appendFile("random.txt", showInfo, function(err) {
-    if(err) throw err;
-    // console.log(showData);
-});
     });
+
 }
 
