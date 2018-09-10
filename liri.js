@@ -1,10 +1,16 @@
 var dot = require("dotenv").config();
 var request = require("request");
 var fs = require("fs");
+var keys = require("./keys.js");
 // var spotify = new Spotify(keys.spotify);
-// var Sportify = require("node-spotify-api");
-// var bands = new Bands;
-// var movie = new OMDB;
+var Spotify = require("node-spotify-api");
+var moment = require("moment");
+
+var spotify = new Spotify({
+    id: process.env.SPOTIFY_ID,
+    secret: process.env.SPOTIFY_SECRET
+  });
+
 
 //takes the command from the command line
 var search = process.argv[2];
@@ -36,23 +42,68 @@ function concertThis() {
             var showData = JSON.parse(body)[i];
             // console.log(showData);
             // console.log(queryURL);
-            var showInfo =`
-            Venue: ${showData.venue.name}
-            Venue location: ${showData.venue.city} ${showData.venue.region}
-            Date: ${showData.datetime}
-            `;
+            var showInfo =
+            console.log("Venue: " + showData.venue.name);
+            console.log("Venue location: " + showData.venue.city + ", " + showData.venue.region)
+            console.log("Date: " + moment(showData.datetime).format("MM/DD/YYY"));
+            console.log("--------------------------------");
             //CONVERT TO MOMENT.JS
-            console.log(showInfo);
+            // console.log(showInfo);
             if (err) {
             console.log(err);
+            console.log("No events currently.");
             }
         }
-        fs.appendFile("random.txt", showInfo, function(err) {
-            if (err) throw err;
-            console.log(showInfo);
-        });
 
     });
 
 }
 
+function spotifyThisSong() {
+    var song = term;
+    if (song === undefined) {
+        console.log("'The Sign' by Ace of Base");
+    }
+
+    spotify.search({ type: 'track', query: song, limit: 10}, function(err, data) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        } else {
+            var theSong ;
+            //stored in the variable would be the arist name, song name, possily a preview link to the song, and the album title.
+            // console.log(theSong);
+        }
+       
+      console.log(data); 
+      });
+}   
+
+function movieThis() {
+    var movie = process.argv[3];
+    var queryURL = "http://www.omdbapi.com/?s=" + movie + "&apikey=9326bfd0";
+    request(queryURL, function(err, response, body){
+            var showData = JSON.parse(body);
+            // console.log(showData);
+            // console.log(queryURL);
+            var showInfo = console.log("Title :" + showData.Title);
+            //ideally would show movie title, year release, imdb and rotten tomatoes rating, country released, language, plot, and actors
+
+            console.log(showInfo);
+            if (err) {
+                console.log(err);
+                console.log("No events currently.");
+            }
+            //Mr. Nobody set as default movie search
+
+    });
+
+
+}
+
+function doWhatItSays() {
+    if(search === "do-what-it-says"){
+        fs.readFile('random.txt', "utf8", function(err, data){
+            console.log(data);
+        });
+    }
+}
